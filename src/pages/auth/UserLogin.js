@@ -80,6 +80,13 @@ const UserLogin = () => {
             </Button>
           )}
         </Box>
+        {error.status ? (
+          <Alert severity={error.type} sx={{ mt: 3 }}>
+            {error.msg}
+          </Alert>
+        ) : (
+          ""
+        )}
       </Box>
     </>
   );
